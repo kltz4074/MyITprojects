@@ -22,7 +22,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SUSYBAKABLOCK = registerBlock("susybakablock",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .jumpFactor(10000)
+                    .jumpFactor(1000000000)
                     .strength(6f).requiresCorrectToolForDrops()) , ModCreativeTabs.KL_TAB
             );
 
