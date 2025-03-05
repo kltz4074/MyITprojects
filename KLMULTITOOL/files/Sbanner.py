@@ -1,12 +1,6 @@
 
 clicks = 0
 
-while True:
-    clicks = clicks + 1
-    print(clicks)
-    if clicks == 100:
-        exit
-
 
 Banner = ''' 
                                                                                            
