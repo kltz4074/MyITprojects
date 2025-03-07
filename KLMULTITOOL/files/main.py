@@ -3,13 +3,10 @@ from pystyle import Write, Colors
 import Sbanner
 import webbrowser
 import random
+
 rdn = random.randint(5000000, 10000000000000000)
-
-
-# Определяем текущую директорию, где находится Python файл
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
-# Указываем путь к новой папке и создаваемому файлу
 folder_name = 'images'
 file_name = 'none.txt'
 folder_path = os.path.join(current_directory, folder_name)
@@ -36,7 +33,7 @@ if inputi == "1":
 if inputi == "2":
     Write.Print(Sbanner.telegram, Colors.yellow_to_green, interval=0.025)
     inputg = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
-    
+
     if inputg == "1":
         
         btdprint(Sbanner.tgks, 0.025)
@@ -44,3 +41,8 @@ if inputi == "2":
         
         if inputgk == "1":
             webbrowser.open('https://t.me/kltzyoutube_pon')
+
+if inputi == "3":
+    smalgnrt = int(Write.Input("от - ", Colors.yellow_to_green, interval=0.025))
+    biggnrt = int(Write.Input("до - ", Colors.yellow_to_green, interval=0.025))
+    btdprint(str(random.randint(smalgnrt, biggnrt)), 0.025)  # Преобразование числа в строку

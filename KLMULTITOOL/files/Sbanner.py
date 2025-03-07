@@ -1,8 +1,7 @@
+version = 0.2
 
-clicks = 0
 
-
-Banner = ''' 
+Banner = f''' 
                                                                                            
                                                                                            
 kkkkkkkk           lllllll         tttt                                            lllllll 
@@ -22,7 +21,7 @@ k::::::k  k:::::k  l::::::l     tt::::::::::::::to:::::::::::::::oo:::::::::::::
 k::::::k   k:::::k l::::::l       tt:::::::::::tt oo:::::::::::oo  oo:::::::::::oo l::::::l
 kkkkkkkk    kkkkkkkllllllll         ttttttttttt     ooooooooooo      ooooooooooo   llllllll
 
- -- version = 0.1
+ -- version = {version}
  
  -- creator = kltzqu
 '''
@@ -34,7 +33,7 @@ textq = '''
 ‖
 ╠ 2) telegram 
 ‖
-╠ 
+╠ 3) генератор чисел
 ‖
 ╝
 ''' 
