@@ -1,6 +1,7 @@
 import os
 from pystyle import Write, Colors
-import Sbanner
+import SbannerRU
+import SbannerENG
 import webbrowser
 import random
 
@@ -17,32 +18,60 @@ with open(os.path.join(folder_path, file_name), 'w', encoding='utf-8') as file:
 def btdprint(text, interval = 0.025):
     Write.Print(text, Colors.yellow_to_green, interval)
 
-#print(Colorate.Horizontal(Colors.yellow_to_red, banner.Banner, 1))
-btdprint(Sbanner.Banner, 0.00025)
-btdprint(Sbanner.textq, 0.025)
-inputi = Write.Input(Sbanner.textu, Colors.yellow_to_green, interval=0.025)
+btdprint("Выберите язык / Choose language 1 - RU, 2 - ENG", 0.025)
+print(" ")
+print(" ")
+lng = Write.Input(">>", Colors.yellow_to_green, interval=0.025)
 
-if int(inputi) == rdn:
-    Write.Input(Sbanner.scrbn, Colors.red, interval=0.00025)
-    btdprint(Sbanner.scrbn, 0.00025)
+if lng == "2":
+    btdprint(SbannerENG.Banner, 0.00025)
+    btdprint(SbannerENG.textq, 0.025)
+    inputi = Write.Input(SbannerENG.textu, Colors.yellow_to_green, interval=0.025)
 
-if inputi == "1":
-    os.startfile(os.path.abspath("files/videos/video1.mp4"))
-    
+    if int(inputi) == rdn:
+        Write.Input(SbannerENG.scrbn, Colors.red, interval=0.00025)
+        btdprint(SbannerENG.scrbn, 0.00025)
         
-if inputi == "2":
-    Write.Print(Sbanner.telegram, Colors.yellow_to_green, interval=0.025)
-    inputg = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
+    if inputi == "1":
+        Write.Print(SbannerENG.telegram, Colors.yellow_to_green, interval=0.025)
+        inputg = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
 
-    if inputg == "1":
-        
-        btdprint(Sbanner.tgks, 0.025)
-        inputgk = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
-        
-        if inputgk == "1":
-            webbrowser.open('https://t.me/kltzyoutube_pon')
+        if inputg == "1":
+            btdprint(SbannerENG.tgks, 0.025)
+            inputgk = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
 
-if inputi == "3":
-    smalgnrt = int(Write.Input("от - ", Colors.yellow_to_green, interval=0.025))
-    biggnrt = int(Write.Input("до - ", Colors.yellow_to_green, interval=0.025))
-    btdprint(str(random.randint(smalgnrt, biggnrt)), 0.025)  # Преобразование числа в строку
+            if inputgk == "1":
+                webbrowser.open('https://t.me/kltzyoutube_pon')
+
+    if inputi == "2":
+        smalgnrt = int(Write.Input("from - ", Colors.yellow_to_green, interval=0.025))
+        biggnrt = int(Write.Input("to - ", Colors.yellow_to_green, interval=0.025))
+        btdprint(str(random.randint(smalgnrt, biggnrt)), 0.025)
+        print(" ")
+
+
+if lng == "1":
+    btdprint(SbannerRU.Banner, 0.00025)
+    btdprint(SbannerRU.textq, 0.025)
+    inputi = Write.Input(SbannerRU.textu, Colors.yellow_to_green, interval=0.025)
+
+    if int(inputi) == rdn:
+        Write.Input(SbannerRU.scrbn, Colors.red, interval=0.00025)
+        btdprint(SbannerRU.scrbn, 0.00025)
+        
+    if inputi == "1":
+        Write.Print(SbannerRU.telegram, Colors.yellow_to_green, interval=0.025)
+        inputg = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
+
+        if inputg == "1":
+            btdprint(SbannerRU.tgks, 0.025)
+            inputgk = Write.Input(">>", Colors.yellow_to_green, interval=0.25)
+
+            if inputgk == "1":
+                webbrowser.open('https://t.me/kltzyoutube_pon')
+
+    if inputi == "2":
+        smalgnrt = int(Write.Input("от - ", Colors.yellow_to_green, interval=0.025))
+        biggnrt = int(Write.Input("до - ", Colors.yellow_to_green, interval=0.025))
+        btdprint(str(random.randint(smalgnrt, biggnrt)), 0.025)
+        print(" ")
