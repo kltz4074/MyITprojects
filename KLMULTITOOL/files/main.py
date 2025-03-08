@@ -49,7 +49,6 @@ if lng == "2":
         btdprint(str(random.randint(smalgnrt, biggnrt)), 0.025)
         print(" ")
 
-
 if lng == "1":
     btdprint(SbannerRU.Banner, 0.00025)
     btdprint(SbannerRU.textq, 0.025)
