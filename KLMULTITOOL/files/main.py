@@ -8,6 +8,7 @@ import SbannerENG
 import webbrowser
 import random
 import string
+import time
 rdn = random.randint(5000000, 10000000000000000)
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,6 +18,46 @@ with open(os.path.join(folder_path, 'none.txt'), 'w', encoding='utf-8') as file:
     file.write(str(rdn))
 
 # FUNCTIONS -----------------------------------------------------------------------------------------------------------------------
+
+def exxut():
+    if lng == "2":
+        time.sleep(1)
+        print(" ")
+        print(" ")
+        btdprint("continue? 1 - yes 2 - no", 0.025)
+        print(" ")
+        btdprint("1 - yes")
+        print(" ")
+        btdprint("2 - no")
+        print(" ")
+        choose = Write.Input(">>", Colors.yellow_to_green, interval=0.025)
+        if choose == "1":
+            os.system("python files/main.py")
+        
+        if choose == "2":
+            btdprint("closing...")
+            print(" ")
+            exit()
+        
+        
+    if lng == "1":
+        time.sleep(1)
+        print(" ")
+        print(" ")
+        btdprint("продолжить?")
+        print(" ")
+        btdprint("1 - да")
+        print(" ")
+        btdprint("2 - нет")
+        print(" ")
+        choose1 = Write.Input(">>", Colors.yellow_to_green, interval=0.025)
+        if choose1 == "2":
+            btdprint("закрываюсь...")
+            print(" ")
+            exit()
+            
+        if choose1 == "1":
+            os.system("python files/main.py")
 
 def convert_jpg_to_png(png_path, jpg_path):
     # Открываем изображение PNG
@@ -89,7 +130,7 @@ if lng == "2":
             print(" ")
             print(" ")
             btdprint("File saved as: " + file_path.rsplit(".", 1)[0] + ".png", 0.025)
-        
+    exxut()
 
 if lng == "1":
     btdprint(SbannerRU.Banner, 0.00025)
@@ -135,3 +176,7 @@ if lng == "1":
             btdprint("путь - " + file_path)
             convert_jpg_to_png(file_path, file_path.rsplit(".", 1)[0] + ".png")
             btdprint("Файл сохранён как: " + file_path.rsplit(".", 1)[0] + ".png", 0.025)
+            
+    exxut()
+
+# END -----------------------------------------------------------------------------------------------------------------------
