@@ -4,8 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.kltzqu.cantgoback.block.ModBlocks;
 import net.kltzqu.cantgoback.item.ModItems;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
