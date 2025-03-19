@@ -80,6 +80,8 @@ minecraft {
             mods {
                 "cantgobackmod" {
                     source sourceSets.main
+
+                    
                 }
             }
         }
