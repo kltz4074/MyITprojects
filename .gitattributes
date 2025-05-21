@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.PremierePro filter=lfs diff=lfs merge=lfs -text
+PremierePro filter=lfs diff=lfs merge=lfs -text
